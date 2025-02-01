@@ -1,0 +1,101 @@
+// 深色模式变量
+:root.dark {
+  // 基础颜色
+  --el-bg-color: #1a1a1a;
+  --el-bg-color-overlay: #242424;
+  --el-text-color-primary: #e5eaf3;
+  --el-text-color-regular: #cfd3dc;
+  --el-text-color-secondary: #a3a6ad;
+  --el-border-color: #4c4d4f;
+  --el-border-color-light: #363637;
+  --el-fill-color: #303030;
+  --el-fill-color-light: #262727;
+  --el-fill-color-blank: #1a1a1a;
+
+  // 组件颜色
+  --el-card-bg-color: #242424;
+  --el-popup-bg-color: #242424;
+  --el-mask-color: rgba(0, 0, 0, 0.8);
+  --el-disabled-bg-color: #2c2c2c;
+
+  // 自定义颜色
+  --app-background: #1a1a1a;
+  --card-background: #242424;
+  --hover-background: #2a2a2a;
+  --border-color: #363637;
+  --text-color: #e5eaf3;
+  --text-color-secondary: #a3a6ad;
+}
+
+// 深色模式样式覆盖
+.dark {
+  // 全局背景
+  background-color: var(--app-background);
+  color: var(--text-color);
+
+  // 卡片样式
+  .el-card {
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+    
+    .el-card__header {
+      border-bottom-color: var(--border-color);
+    }
+  }
+
+  // 表单样式
+  .el-input__wrapper,
+  .el-textarea__wrapper {
+    background-color: var(--el-fill-color);
+  }
+
+  // 表格样式
+  .el-table {
+    background-color: var(--card-background);
+    
+    th.el-table__cell {
+      background-color: var(--el-fill-color);
+    }
+    
+    .el-table__row:hover > td.el-table__cell {
+      background-color: var(--hover-background);
+    }
+  }
+
+  // 菜单样式
+  .el-menu {
+    background-color: transparent;
+    border-color: var(--border-color);
+    
+    .el-menu-item {
+      &:hover {
+        background-color: var(--hover-background);
+      }
+      
+      &.is-active {
+        background-color: var(--el-color-primary-light-9);
+      }
+    }
+  }
+
+  // 弹窗样式
+  .el-dialog,
+  .el-message-box {
+    background-color: var(--card-background);
+    
+    .el-dialog__header {
+      border-bottom-color: var(--border-color);
+    }
+  }
+
+  // 通知中心样式
+  .notification-center {
+    .notification-item {
+      border-color: var(--border-color);
+      
+      &:hover {
+        background-color: var(--hover-background);
+      }
+    }
+  }
+} 
